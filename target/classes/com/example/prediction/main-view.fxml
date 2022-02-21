@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="871.0" prefWidth="1335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prediction.HelloController">
+   <children>
+      <VBox layoutX="1031.0" layoutY="288.0" prefHeight="871.0" prefWidth="336.0" style="-fx-background-color: #1E90FF;" styleClass="leftRadius2" stylesheets="@search-box.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <BorderPane layoutX="426.0" layoutY="264.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="70.0" left="70.0" right="70.0" top="70.0" />
+         </padding>
+         <center>
+            <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.656014621257782" green="0.6312835812568665" blue="0.6312835812568665" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <left>
+                  <VBox alignment="TOP_CENTER" prefHeight="731.0" prefWidth="736.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Company Expenses Prediction" textFill="DODGERBLUE">
+                                 <font>
+                                    <Font name="DejaVu Serif Condensed Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="736.0">
+                           <children>
+                              <Label text="Employees">
+                                 <padding>
+                                    <Insets left="80.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="76.0" prefWidth="736.0">
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                           <children>
+                              <Label text="Current Number" />
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="204.0">
+                                 <children>
+                                    <Label fx:id="empCurrentNoMessage" alignment="CENTER" prefHeight="23.0" prefWidth="199.0" textFill="#de0f0f" />
+                                    <TextField fx:id="empCurrentNo" alignment="CENTER" prefHeight="36.0" prefWidth="204.0" styleClass="radiuses" stylesheets="@search-box.css" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="76.0" prefWidth="16.0" />
+                              <Label text="Increase" />
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="134.0">
+                                 <children>
+                                    <Label fx:id="empIncreaseMessage" alignment="CENTER" prefHeight="24.0" prefWidth="129.0" textFill="#de0f0f" />
+                                    <TextField fx:id="empIncreaseNo" alignment="CENTER" prefHeight="36.0" prefWidth="100.0" promptText="emp no" styleClass="radiuses" stylesheets="@search-box.css">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" layoutX="502.0" layoutY="10.0" prefHeight="76.0" prefWidth="134.0">
+                                 <children>
+                                    <Label fx:id="empIncreaseIntervalMessage" alignment="CENTER" prefHeight="24.0" prefWidth="129.0" textFill="#de0f0f" />
+                                    <TextField fx:id="empIncreaseInterval" alignment="CENTER" prefHeight="36.0" prefWidth="104.0" promptText="interval" styleClass="radiuses" stylesheets="@search-box.css">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="144.0" prefHeight="76.0" prefWidth="736.0">
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                           <children>
+                              <Label prefHeight="16.0" prefWidth="107.0" />
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="204.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="23.0" prefWidth="199.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="76.0" prefWidth="16.0" />
+                              <Label prefHeight="16.0" prefWidth="68.0" text="Decrease" />
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="134.0">
+                                 <children>
+                                    <Label fx:id="empDecreaseNoMessage" alignment="CENTER" prefHeight="24.0" prefWidth="129.0" textFill="#de0f0f" />
+                                    <TextField fx:id="empDecreaseNo" alignment="CENTER" prefHeight="36.0" prefWidth="100.0" promptText="emp no" styleClass="radiuses" stylesheets="@search-box.css">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" layoutX="502.0" layoutY="10.0" prefHeight="76.0" prefWidth="134.0">
+                                 <children>
+                                    <Label fx:id="empDecreaseIntervalMessage" alignment="CENTER" prefHeight="24.0" prefWidth="129.0" textFill="#de0f0f" />
+                                    <TextField fx:id="empDecreaseInterval" alignment="CENTER" prefHeight="36.0" prefWidth="104.0" promptText="interval" styleClass="radiuses" stylesheets="@search-box.css">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="736.0">
+                           <children>
+                              <Label text="Expenditures">
+                                 <padding>
+                                    <Insets left="80.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="76.0" prefWidth="736.0">
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                           <children>
+                              <Label text="Current  Salary  " />
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="204.0">
+                                 <children>
+                                    <Label fx:id="expEmpSalaryMessage" alignment="CENTER" prefHeight="23.0" prefWidth="199.0" textFill="#de0f0f" />
+                                    <TextField fx:id="expeEmpSalary" alignment="CENTER" prefHeight="36.0" prefWidth="204.0" promptText="per employee" styleClass="radiuses" stylesheets="@search-box.css" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="76.0" prefWidth="16.0" />
+                              <Label text="Increase" />
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="134.0">
+                                 <children>
+                                    <Label fx:id="expEmpSalasyIncreaseMessage" alignment="CENTER" prefHeight="24.0" prefWidth="129.0" textFill="#de0f0f" />
+                                    <TextField fx:id="expEmpSalaryIncrease" alignment="CENTER" prefHeight="36.0" prefWidth="100.0" promptText="amount" styleClass="radiuses" stylesheets="@search-box.css">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" layoutX="502.0" layoutY="10.0" prefHeight="76.0" prefWidth="134.0">
+                                 <children>
+                                    <Label fx:id="expEmpSalaryIncreaseIntervalMessage" alignment="CENTER" prefHeight="24.0" prefWidth="129.0" textFill="#de0f0f" />
+                                    <TextField fx:id="expEmpSalaryIncreaseInterval" alignment="CENTER" prefHeight="36.0" prefWidth="104.0" promptText="interval" styleClass="radiuses" stylesheets="@search-box.css">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="76.0" prefWidth="736.0">
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                           <children>
+                              <Label prefHeight="16.0" prefWidth="97.0" text="Constant Exp" />
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="134.0">
+                                 <children>
+                                    <Label fx:id="expConstantAmountMessage" alignment="CENTER" prefHeight="24.0" prefWidth="129.0" textFill="#de0f0f" />
+                                    <TextField fx:id="expConstantAmount" alignment="CENTER" prefHeight="36.0" prefWidth="100.0" promptText="amount" styleClass="radiuses" stylesheets="@search-box.css">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" layoutX="502.0" layoutY="10.0" prefHeight="76.0" prefWidth="134.0">
+                                 <children>
+                                    <Label fx:id="expConstantIntervalMessage" alignment="CENTER" prefHeight="24.0" prefWidth="129.0" textFill="#de0f0f" />
+                                    <TextField fx:id="expConstantInterval" alignment="CENTER" prefHeight="36.0" prefWidth="104.0" promptText="interval" styleClass="radiuses" stylesheets="@search-box.css">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="736.0">
+                           <children>
+                              <Label text="Prediction">
+                                 <padding>
+                                    <Insets left="80.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="76.0" prefWidth="736.0">
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                           <children>
+                              <Label prefHeight="16.0" prefWidth="101.0" text="Predict After" />
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="76.0" prefWidth="134.0">
+                                 <children>
+                                    <Label fx:id="predictAfterMessage" alignment="CENTER" prefHeight="24.0" prefWidth="129.0" textFill="#de0f0f" />
+                                    <TextField fx:id="predictAfter" alignment="CENTER" prefHeight="36.0" prefWidth="100.0" promptText="in month" styleClass="radiuses" stylesheets="@search-box.css">
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" layoutX="502.0" layoutY="10.0" prefHeight="76.0" prefWidth="134.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="24.0" prefWidth="129.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="736.0">
+                           <children>
+                              <Label fx:id="predictMessage" alignment="CENTER" prefHeight="29.0" prefWidth="268.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="603.0" prefHeight="74.0" prefWidth="736.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#predictButtonOnAction" style="-fx-background-color: #1E90FF;" styleClass="radiuses" stylesheets="@search-box.css" text="Predict">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </left>
+               <right>
+                  <VBox alignment="TOP_CENTER" prefHeight="731.0" prefWidth="468.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Circle fill="WHITE" radius="100.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <Circle fill="DODGERBLUE" radius="18.0" stroke="BLACK" strokeType="INSIDE">
+                           <VBox.margin>
+                              <Insets left="170.0" />
+                           </VBox.margin>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="444.0" prefWidth="469.0">
+                           <children>
+                              <Label textFill="DODGERBLUE" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding></VBox>
+               </right>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
